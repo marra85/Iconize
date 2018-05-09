@@ -1,4 +1,8 @@
-﻿<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!-- VS4Mac workaround -->
+  </PropertyGroup>
 
   <ItemGroup>
     <None Remove="@(FontFiles)" />

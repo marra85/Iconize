@@ -1,4 +1,8 @@
-﻿<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!-- VS4Mac workaround -->
+  </PropertyGroup>
 
   <ItemGroup>
     <Compile Remove="**/Platform/**/*.cs" />
@@ -14,7 +18,7 @@
     <None Remove="**/Platform/iOS/**/*.cs" />
     <Compile Include="**/Platform/iOS/**/*.cs" />
   </ItemGroup>
-  
+
   <ItemGroup Condition=" $(TargetFramework.StartsWith('Xamarin.Mac')) ">
     <None Remove="**/Platform/macOS/**/*.cs" />
     <Compile Include="**/Platform/macOS/**/*.cs" />
@@ -26,5 +30,5 @@
   </ItemGroup>
 
   <Import Project="$(MSBuildSDKExtrasTargets)" Condition="Exists('$(MSBuildSDKExtrasTargets)')" />
-  
+
 </Project>
