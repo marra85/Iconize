@@ -263,3 +263,9 @@ __pycache__/
 # Build Tools
 tools/
 build.ps1
+
+
+# OSX Specific
+
+*.DS_Store
+._*
